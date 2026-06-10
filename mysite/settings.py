@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-change-this-key'
 
-# DEBUG (production এ False করবে)
+# DEBUG (production এ False করা ভালো, কিন্তু এখন True রাখতে পারো)
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'accounts',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -35,7 +36,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'mysite.urls'
+
 
 TEMPLATES = [
     {
@@ -52,6 +55,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
@@ -82,26 +86,30 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# International
+# Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Dhaka'
 USE_I18N = True
 USE_TZ = True
 
 
-# Static files
-STATIC_URL = 'static/'
+# =========================
+# STATIC FILES (IMPORTANT FIX)
+# =========================
 STATIC_URL = '/static/'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
 
-# Default primary key
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# =========================
+# MEDIA FILES
+# =========================
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+# Default primary key
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
