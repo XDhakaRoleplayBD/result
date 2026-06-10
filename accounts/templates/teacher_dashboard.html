@@ -1,0 +1,14 @@
+<h1>Teacher Dashboard</h1>
+
+<a href="/upload-result/">Upload Result</a>
+<a href="/logout/">Logout</a>
+
+<hr>
+
+{% for r in results %}
+    <h3>{{ r.title }}</h3>
+    <img src="{{ r.image.url }}" width="200">
+
+    <a href="/delete-result/{{ r.id }}/">Delete</a>
+    <hr>
+{% endfor %}

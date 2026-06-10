@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Coaching Center{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">আল-ফালাহ একাডেমি</div>
+
+    <nav>
+        <a href="{% url 'home' %}">হোম</a>
+        <a href="{% url 'results' %}">রেজাল্ট</a>
+    </nav>
+</header>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    © 2025 Coaching Center | Designed by You
+</footer>
+
+</body>
+</html>

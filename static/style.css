@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0a3d62;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+}
+
+/* RESULT BUTTON FIXED */
+.result-fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.result-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LOGIN BOX */
+.login-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.teacher { background: #2980b9; }
+.student { background: #27ae60; }
+
+/* FORM */
+.form-box {
+    max-width: 350px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0a3d62;
+    color: white;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .result-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+}

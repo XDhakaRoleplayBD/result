@@ -1,0 +1,99 @@
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins', sans-serif;
+    }
+
+    body{
+        min-height:100vh;
+        background: linear-gradient(135deg, #0a3d62, #1e6091, #2ecc71);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+    }
+
+    .container{
+        text-align:center;
+        width:100%;
+        max-width:420px;
+    }
+
+    h1{
+        color:white;
+        font-size:32px;
+        margin-bottom:30px;
+        letter-spacing:1px;
+        text-shadow:0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn-box{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    a{
+        text-decoration:none;
+    }
+
+    button{
+        width:100%;
+        padding:14px;
+        border:none;
+        border-radius:14px;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+        color:white;
+        transition:0.3s ease;
+        box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Teacher Button */
+    a:nth-child(1) button{
+        background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    }
+
+    /* Student Button */
+    a:nth-child(2) button{
+        background: linear-gradient(135deg, #1dd1a1, #10ac84);
+    }
+
+    button:hover{
+        transform:translateY(-3px);
+        box-shadow:0 12px 25px rgba(0,0,0,0.35);
+    }
+
+    button:active{
+        transform:scale(0.97);
+    }
+
+    /* MOBILE */
+    @media(max-width:480px){
+        h1{
+            font-size:26px;
+        }
+
+        button{
+            font-size:15px;
+            padding:12px;
+        }
+    }
+</style>
+
+<div class="container">
+    <h1>Result Page</h1>
+
+    <div class="btn-box">
+        <a href="{% url 'teacher_login' %}">
+            <button>Teacher Login</button>
+        </a>
+
+        <a href="{% url 'student_login' %}">
+            <button>Student Login</button>
+        </a>
+    </div>
+</div>
