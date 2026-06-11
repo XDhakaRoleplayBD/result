@@ -4,3 +4,4 @@ pillow
 requests
 sqlparse
 tzdata
+psycopg2-binary

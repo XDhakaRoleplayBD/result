@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -60,11 +61,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database (SQLite default)
+# =========================
+# DATABASE (POSTGRESQL)
+# =========================
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mysite_db_1vjz',
+        'USER': 'mysite_db_1vjz_user',
+        'PASSWORD': '0dxz9Vqqlk1qpdmdmeJ74bCi0OhQ70Vs',  # 👈 এখানে Render password বসাবে
+        'HOST': 'dpg-d8l1gde7r5hc739hf210-a',
+        'PORT': '5432',
     }
 }
 
@@ -94,7 +101,7 @@ USE_TZ = True
 
 
 # =========================
-# STATIC FILES (IMPORTANT FIX)
+# STATIC FILES
 # =========================
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
